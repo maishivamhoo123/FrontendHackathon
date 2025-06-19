@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  position: relative;
+  color: hsl(0, 45%, 98%);
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #10a3a3, #0077ff);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}

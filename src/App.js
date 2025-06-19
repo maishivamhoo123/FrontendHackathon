@@ -22,37 +22,30 @@ function App() {
   if (loading) return <Loader/>;
   return (
   <div>
-    <Navbar/> {/* We'll create this below */}
+    <Navbar />
+    
+    <ParallaxDoor />
+    
+    <h2 className="section-title">Capturing the Moments</h2>
+    <ImageFocusPage />
 
-    <div id="parallax">
-      <ParallaxDoor />
-    </div>
+    <h2 className="section-title">Our Premium Brand Kits</h2>
+    <BrandKitsCard />
 
-    <div id="focus">
-      <ImageFocusPage />
-    </div>
+    <h2 className="section-title">Embodied Carbon Insights</h2>
+    <EmbodiedCarbon />
 
-    <div id="brand">
-      <BrandKitsCard />
-    </div>
+    <h2 className="section-title">Sustainability Dashboard</h2>
+    <Dashboard />
 
-    <div id="carbon">
-      <EmbodiedCarbon />
-    </div>
+    <h2 className="section-title">Our Customers</h2>
+    <LogoCarousel />
 
-    <div id="stats">
-      <Dashboard />
-    </div>
-
-    <div id="customers">
-      <LogoCarousel />
-    </div>
-
-    <div id="ripple">
-      <RippleWater />
-    </div>
+    <h2 className="section-title">Feel the Ripple</h2>
+    <RippleWater />
   </div>
 );
+
 
 }
 
