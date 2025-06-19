@@ -1,0 +1,104 @@
+/* Wrapper for the whole section */
+.carousel-section {
+  text-align: center;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Title above the icons */
+.carousel-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Grid that shows 4 icons at a time in one row */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Fixed to 4 columns */
+  gap: 40px;
+  justify-items: center;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: auto;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+/* Fade in & out transitions */
+.icon-grid.fade-in {
+  opacity: 1;
+}
+
+.icon-grid.fade-out {
+  opacity: 0;
+}
+
+/* Icon wrapper */
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+/* Default icon size */
+.icon-wrapper svg {
+  width: 60px;
+  height: 60px;
+}
+
+/* For larger icons (marked with `large` flag in JSX) */
+.large-icon svg {
+  width: 80px;
+  height: 80px;
+}
+
+/* Responsive design */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .carousel-title {
+    font-size: 1.75rem;
+  }
+
+  .icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .icon-wrapper svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .large-icon svg {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .carousel-title {
+    font-size: 1.5rem;
+  }
+
+  .icon-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+  }
+
+  .icon-wrapper svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .large-icon svg {
+    width: 55px;
+    height: 55px;
+  }
+}

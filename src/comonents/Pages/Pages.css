@@ -1,0 +1,117 @@
+.brandkits-card {
+  width: 380px;
+  background: linear-gradient(135deg, #ec4899, #8b5cf6, #3b82f6);
+  padding: 2px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  margin: 30px auto;
+}
+
+.brandkits-card-inner {
+  background: #18181b;
+  border-radius: 18px;
+  padding: 28px 24px;
+}
+
+.brandkits-title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+  text-align: left;   /* Left aligned */
+  padding-left: 0;
+}
+
+.brandkits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.brandkits-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #18181b;
+  border-radius: 14px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  border: 2px solid transparent;
+}
+
+.brandkits-item:hover {
+  background: #23232b;
+}
+
+.brandkits-item.selected {
+  border: 2px solid #a78bfa;
+  background: #23232b;
+}
+
+.brandkits-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandkits-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid #333;
+  background: #23232b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  transition: background 0.2s, border 0.2s;
+}
+
+.brandkits-checkbox.checked {
+  background: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+.brandkits-triangle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.brandkits-triangle-row {
+  display: flex;
+  justify-content: center;
+}
+
+.brandkits-triangle-row:first-child {
+  margin-bottom: -4px; /* overlap a bit for triangle effect */
+}
+
+.brandkits-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #23232b;
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.brandkits-name {
+  color: #fff;
+  font-weight: 500;
+  margin-left: 8px;
+  font-size: 1rem;
+}
+
+.brandkits-settings {
+  color: #a1a1aa;
+  transition: color 0.2s;
+  margin-left: 10px;
+}
+
+.brandkits-settings:hover {
+  color: #fff;
+}

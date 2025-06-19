@@ -1,0 +1,222 @@
+.graph-container {
+  background: #fdf8f6;
+  padding: 24px;
+  font-family: "Montserrat", sans-serif;
+  color: #2d2d2d;
+}
+
+.graph-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.graph-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.graph-right {
+  text-align: right;
+  flex: 1;
+  min-width: 280px;
+}
+
+.graph-title h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.graph-title span {
+  color: #7a4c4c;
+  font-weight: 600;
+}
+
+.graph-title p {
+  color: #7a4c4c;
+  font-size: 1rem;
+}
+
+.download {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #7a4c4c;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.filter-section .filter-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.filter-group {
+  margin-bottom: 12px;
+}
+
+.filter-group label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.filter-options button {
+  margin-right: 8px;
+  padding: 6px 16px;
+  border: 1.5px solid #7a4c4c;
+  border-radius: 20px;
+  background: transparent;
+  color: #7a4c4c;
+  cursor: pointer;
+}
+
+.filter-options .active {
+  background: #7a4c4c;
+  color: white;
+}
+
+.graph-key {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: #7a4c4c;
+}
+
+.key-dashed,
+.key-solid {
+  display: inline-block;
+  width: 30px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.key-dashed {
+  border-bottom: 2px dashed #7a4c4c;
+}
+
+.key-solid {
+  border-bottom: 2px solid #7a4c4c;
+}
+
+.chart-wrapper {
+  position: relative;
+  margin-top: 32px;
+}
+
+.y-label {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  color: #7a4c4c;
+  font-size: 0.9rem;
+}
+
+.bar-chart {
+  display: flex;
+  justify-content: space-between; /* Distribute bars evenly */
+  align-items: flex-end;
+  height: 320px;
+  margin-left: 60px;
+  border-left: 1.5px solid #ccc;
+  border-bottom: 1.5px solid #ccc;
+  position: relative;
+  padding: 0 16px;
+  width: calc(100% - 60px);
+}
+
+.bar-group {
+  flex: 1; /* Each bar takes equal width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.bar {
+  width: 40%; /* Responsive width relative to group */
+  background: #7a4c4c;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  transition: height 0.4s ease;
+}
+
+.bar-label {
+  position: absolute;
+  top: -22px;
+  font-size: 0.8rem;
+  color: #7a4c4c;
+  background: #fdf8f6;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.x-label {
+  font-size: 0.7rem;
+  color: #333;
+}
+
+.grid {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.line-500 {
+  top: 120px;
+  border-top: 1.5px dashed #c8a5a5;
+}
+
+.line-600 {
+  top: 90px;
+  border-top: 1.5px solid #7a4c4c;
+}
+
+.pie-chart-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.pie-chart {
+  width: 300px;
+  height: 300px;
+  background: #f7f3f1;
+  margin: 0 auto;
+}
+
+.accessibility-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #f7c8c8;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.5rem;
+  color: #7a4c4c;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .graph-header {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .y-label {
+    display: none;
+  }
+
+  .bar-chart {
+    margin-left: 0;
+  }
+}

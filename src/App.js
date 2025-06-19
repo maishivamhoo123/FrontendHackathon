@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import BrandKitsCard from './comonents/Pages/pages';
+import EmbodiedCarbon from './comonents/Graph/graph';
+import Dashboard from './comonents/Stats/stats';
+import LogoCarousel from './comonents/costumers_section/Costumers';
+import ParallaxDoor from './comonents/ParalaxPage/Paralapage';
+import ImageFocusPage from './comonents/ImageFocus/ImageFocus';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ParallaxDoor/>
+      <ImageFocusPage/>
+    <BrandKitsCard/>
+    <EmbodiedCarbon/>
+    <Dashboard/>
+    <LogoCarousel/>
     </div>
   );
 }
