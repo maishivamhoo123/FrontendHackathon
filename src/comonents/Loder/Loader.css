@@ -1,0 +1,59 @@
+.loader-bg {
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0; left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-bar-container {
+  position: relative;
+  width: 300px;
+  height: 40px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.loader-bar-fill {
+  height: 100%;
+  background: #fff;
+  border-radius: 4px;
+  transition: width 0.2s;
+  width: 0%;
+  box-shadow: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.loader-bar-shadow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 16px;
+  height: 100%;
+  background: #333;
+  border-radius: 0 4px 4px 0;
+  z-index: 1;
+}
+
+.loader-percentage {
+  position: fixed;
+  left: 24px;
+  bottom: 16px;
+  color: #fff;
+  font-size: 64px;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-weight: bold;
+  opacity: 0.92;
+  letter-spacing: 2px;
+  z-index: 10;
+  user-select: none;
+  pointer-events: none;
+}

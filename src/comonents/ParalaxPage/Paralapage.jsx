@@ -12,52 +12,53 @@ const ParallaxDoor = () => {
   const textRef = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top top",
-        end: "+=100vh",
-        scrub: true,
-        pin: true,
-      },
-    });
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: containerRef.current,
+      start: "top top",
+      end: "+=100vh",
+      scrub: 1, // smoother scroll-based effect
+      pin: true,
+    },
+  });
 
-    tl.to(
-      textRef.current,
-      {
-        y: -100,
-        opacity: 0,
-        ease: "power2.out",
-      },
-      0
-    );
+  // Move text up just to top edge and fade a little
+  tl.to(
+    textRef.current,
+    {
+      y: "-80px",
+      opacity: 0.3,
+      ease: "power2.out",
+    },
+    0
+  );
 
-    tl.to(
-      leftImageRef.current,
-      {
-        rotateY: -75,
-        transformOrigin: "left center",
-        ease: "power2.inOut",
-        boxShadow: "0 10px 40px rgba(0,0,0,0.3)",
-      },
-      0
-    );
+  // Left image slow rotate
+  tl.to(
+    leftImageRef.current,
+    {
+      rotateY: -15, // subtle
+      transformOrigin: "left center",
+      ease: "power2.out",
+    },
+    0
+  );
 
-    tl.to(
-      rightImageRef.current,
-      {
-        rotateY: 75,
-        transformOrigin: "right center",
-        ease: "power2.inOut",
-        boxShadow: "0 10px 40px rgba(0,0,0,0.3)",
-      },
-      0
-    );
+  // Right image slow rotate
+  tl.to(
+    rightImageRef.current,
+    {
+      rotateY: 15, // subtle
+      transformOrigin: "right center",
+      ease: "power2.out",
+    },
+    0
+  );
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+  return () => {
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  };
+}, []);
 
   return (
     <div className="parallax-container" ref={containerRef}>
