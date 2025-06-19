@@ -10,6 +10,7 @@ import ImageFocusPage from './comonents/ImageFocus/ImageFocus';
 import Loader from './comonents/Loder/Loader';
 import RippleWater from './comonents/Ripple /Ripple';
 import Navbar from './NavBar/NavBar';
+import SellerSection from './comonents/SellerSection/Seller';
 
 function App() {
    const [loading, setLoading] = useState(true);
@@ -43,7 +44,9 @@ function App() {
 
     <h2 className="section-title">Feel the Ripple</h2>
     <RippleWater />
+    <SellerSection/>
   </div>
+  
 );
 
 
